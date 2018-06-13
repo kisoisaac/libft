@@ -6,7 +6,7 @@
 /*   By: kiisaac <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 19:00:02 by kiisaac           #+#    #+#             */
-/*   Updated: 2018/06/12 22:16:14 by kiisaac          ###   ########.fr       */
+/*   Updated: 2018/06/12 22:45:37 by kiisaac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ char					*ft_strsub(char const *s, unsigned int start,
 						size_t len);
 char					**ft_strsplit(char const *s, char c);
 char					*ft_strjoin(char const *s1, char const *s2);
+char					*ft_strtrim(char const *s);
 int						ft_isalpha(int c);
 int						ft_isdigit(int c);
 int						ft_isalnum(int c);
