@@ -6,7 +6,7 @@
 /*   By: kiisaac <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 21:30:10 by kiisaac           #+#    #+#             */
-/*   Updated: 2018/05/21 23:28:25 by kiisaac          ###   ########.fr       */
+/*   Updated: 2018/06/12 23:36:39 by kiisaac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int		ft_strequ(char const *s1, char const *s2)
 {
 	unsigned int i;
 
+	if (!s1 || !s2)
+		return (0);
 	i = 0;
 	while (s1[i] == s2[i])
 	{

@@ -6,7 +6,7 @@
 /*   By: kiisaac <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 17:14:58 by kiisaac           #+#    #+#             */
-/*   Updated: 2018/06/12 22:12:26 by kiisaac          ###   ########.fr       */
+/*   Updated: 2018/06/12 23:34:40 by kiisaac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char		*ft_strmap(char const *s, char (*f)(char))
 	char			*str;
 	unsigned int	i;
 
+	if (!s || !f)
+		return (0);
 	i = 0;
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s)) + 1);
 	if (str == NULL)

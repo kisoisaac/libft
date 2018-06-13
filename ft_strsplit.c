@@ -6,7 +6,7 @@
 /*   By: kiisaac <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 19:28:26 by kiisaac           #+#    #+#             */
-/*   Updated: 2018/06/01 19:54:26 by kiisaac          ###   ########.fr       */
+/*   Updated: 2018/06/12 23:41:23 by kiisaac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char		**ft_strsplit(char const *s, char c)
 	int		m;
 	char	**tab;
 
+	if (!s)
+		return (0);
 	i = 0;
 	m = 0;
 	tab = (char **)malloc(sizeof(char *) * (ft_cntwrd(s, c)) + 1);
