@@ -6,7 +6,7 @@
 /*   By: kiisaac <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/12 23:45:50 by kiisaac           #+#    #+#             */
-/*   Updated: 2018/06/12 23:50:04 by kiisaac          ###   ########.fr       */
+/*   Updated: 2018/06/13 15:21:53 by kiisaac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char		*ft_strtrim(char const *s)
 {
-	unsigned int 	i;
-	unsigned int 	j;
-	unsigned int 	k;
-	char 	*str;
+	unsigned int		i;
+	unsigned int		j;
+	unsigned int		k;
+	char				*str;
 
 	if (!s)
 		return (0);
@@ -25,15 +25,14 @@ char		*ft_strtrim(char const *s)
 	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
 		i++;
 	k = ft_strlen(s);
-	while ((s[k] == ' ' || s[k] == '\t' || s[k] == '\n' || s[k] == '\0') && k > 0) 
+	while ((s[k] == ' ' || s[k] == '\t' || s[k] == '\n' || s[k] == '\0') &&
+			k > 0)
 		k--;
-		str = (char *)malloc(sizeof(char) * (k - i + 1)) ;
-	if (str == NULL)
+	if (!(str = (char *)malloc(sizeof(char) * (k - i + 1))))
 		return (NULL);
 	j = 0;
-	while(i <= k)
+	while (i <= k)
 	{
-		
 		str[j] = s[i];
 		i++;
 		j++;
